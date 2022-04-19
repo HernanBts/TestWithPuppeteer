@@ -12,5 +12,6 @@ describe('My first test...', () => {
         await page.waitForTimeout(5000)
 
         await browser.close()
+        console.log('finsh test...')
     }, 10000)
 })
