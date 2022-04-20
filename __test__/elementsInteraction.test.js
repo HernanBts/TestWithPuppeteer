@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
 
-describe('My second test...', () => {
-    it('Interaction with mouse clicks', async() => {
+xdescribe('My second test...', () => {
+    xit('Interaction with mouse clicks', async() => {
         const browser = await puppeteer.launch({
             headless: false,
             defaultViewport: null,
