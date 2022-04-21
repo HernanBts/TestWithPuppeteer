@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
 
-describe('Tests of extract info...', () => {
-    it('extracting value of button.', async() => {
+xdescribe('Tests of extract info...', () => {
+    xit('extracting value of button.', async() => {
         const browser = await puppeteer.launch({
             headless: false,
             defaultViewport: null,
