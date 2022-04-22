@@ -11,7 +11,8 @@ describe('Emulating diferents devices...', () => {
             headless: false,
             defaultViewport: null,
         })
-        page = await browser.newPage()
+        const context = await browser.createIncognitoBrowserContext()
+        page = await context.newPage()
         await page.goto('https://demoqa.com/')
     })
 
