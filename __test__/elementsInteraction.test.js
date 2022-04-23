@@ -11,7 +11,7 @@ xdescribe('My second test...', () => {
         const XPath = false
         const page = await browser.newPage()
 
-        await page.goto('https://demo.guru99.com/test/simple_context_menu.html')
+        await page.goto('https://demoqa.com/buttons')
 
         // click on alert
         page.on('dialog', async(dialog) => {
@@ -19,10 +19,10 @@ xdescribe('My second test...', () => {
         })
 
         // right lick
-        await rightClick(page,'#authentication > span')
+        await rightClick(page,'#rightClickBtn')
 
         // doble click
-        await doubleCLick(page,'#authentication > button')
+        await doubleCLick(page,'#doubleClickBtn')
 
         // using clicks and type...
         await page.goto('https://devexpress.github.io/testcafe/example/')
@@ -31,7 +31,7 @@ xdescribe('My second test...', () => {
         await click(page, '#tried-test-cafe')
         await setText(page, '#comments', 'This es a comment using puppeteer', {delay: 100})
         await click(page, '#windows')
-        await selectCombo('#preferred-interface','Both')
+        await selectCombo(page, '#preferred-interface','Both')
         await click(page, '#submit-button')
         await page.waitForSelector('#article-header')
 
