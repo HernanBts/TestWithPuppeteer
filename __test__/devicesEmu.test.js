@@ -20,7 +20,7 @@ describe('Emulating diferents devices...', () => {
         browser.close()
     })
 
-    it('Devices site EMU', async () => {
+    xit('Devices site EMU', async () => {
         await page.emulate({
             name: 'My SmartPhone',
             viewport: {
@@ -37,7 +37,7 @@ describe('Emulating diferents devices...', () => {
         await page.waitForTimeout(3000)
     })
 
-    it('Desktop site EMU', async () => {
+    xit('Desktop site EMU', async () => {
         await page.setViewport({
             width: 1280,
             height: 800
@@ -46,14 +46,14 @@ describe('Emulating diferents devices...', () => {
         await page.waitForTimeout(3000)
     })
 
-    it('Tablet site EMU', async () => {
+    xit('Tablet site EMU', async () => {
         const tablet = puppeteer.devices['iPad Pro']
         await page.emulate(tablet)
 
         await page.waitForTimeout(3000)
     })
 
-    it('Phone site EMU', async () => {
+    xit('Phone site EMU', async () => {
         const Phone = puppeteer.devices['iPhone X']
         await page.emulate(Phone)
 

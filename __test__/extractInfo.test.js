@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer')
+const {getText, getCount} = require('../utils/helpers')
 
 xdescribe('Tests of extract info...', () => {
     xit('extracting value of button.', async() => {
@@ -7,22 +8,20 @@ xdescribe('Tests of extract info...', () => {
             defaultViewport: null,
         })
         const page = await browser.newPage()
+        const XPath = false
         await page.goto('https://demoqa.com/buttons')
 
         // functions and using selector
         const title = await page.title()
         const url = await page.url()
         await page.waitForSelector('#rightClickBtn')
-        const valBtn = await page.$eval('#rightClickBtn', (button)=>button.textContent)
+        const valBtn = await getText(page, '#rightClickBtn')
 
         // using XPath
-        const button = await page.waitForXPath('//*[@id="rightClickBtn"]')
-        // const [button] = await page.$x('//*[@id="rightClickBtn"]')
-
-        const xValBtn = await page.evaluate((text) => text.textContent, button)
+        const xValBtn = await getText(page, '//*[@id="rightClickBtn"]', XPath)
 
         // obtain data
-        const data = await page.$$eval('img', (img) => img.length)
+        const data = await getCount(page, 'img')
 
         console.log(`#### Title #### ${title}
                      \n#### URL #### ${url}
