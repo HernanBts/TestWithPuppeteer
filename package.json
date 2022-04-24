@@ -5,13 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --forceExit"
+    "test": "jest --forceExit",
+    "v-test": "jest --updateSnapshot --forceExit --detectOpenHandles __tests__/visual.test.js" 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jest": "^27.5.1",
+    "jest-image-snapshot": "^4.5.1",
     "puppeteer": "^13.5.2"
   }
 }
