@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 
-describe('Making PDF with puppeteer', () => {
+xdescribe('Making PDF with puppeteer', () => {
     jest.setTimeout(30000)
 
     let browser
@@ -20,7 +20,7 @@ describe('Making PDF with puppeteer', () => {
         await browser.close()
     })
 
-    it('Normal PDF', async () => {
+   xit('Normal PDF', async () => {
         let pdfCSS = []
         pdfCSS.push('<style>')
         pdfCSS.push('h1 { front-size:10px; margin-left:30px;}')
@@ -43,7 +43,7 @@ describe('Making PDF with puppeteer', () => {
         })
     })
 
-    it('Landscape PDF', async () => {
+    xit('Landscape PDF', async () => {
         let pdfCSS = []
         pdfCSS.push('<style>')
         pdfCSS.push('h1 { front-size:10px; margin-left:30px;}')
